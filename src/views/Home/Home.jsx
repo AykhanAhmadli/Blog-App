@@ -1,2 +1,10 @@
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<h1>Hello, world!</h1>);
+import './style.scss'
+function Home({ text, color }) {
+    return (
+        <div className={'textaqua'}>
+            <p>{text}</p>
+        </div>
+    );
+}
+
+export default Home;
