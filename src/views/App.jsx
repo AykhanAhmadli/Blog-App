@@ -1,12 +1,17 @@
-import logo from '../assets/logo.svg'
-import LobbyCard from '../components/LobbyCard';
-import Home from './Home'
+import LobbyCard from '../components/LobbyCard/LobbyCard';
+import LobbyDetails from '../components/LobbyDetails/LobbyDetails';
+import Lobbies from '../fakeDB/Lobbies.js'
 
 function App() {
   return (
     <div className="App">
-      <LobbyCard lobbyName="Lobby123" lobbyActivePlayerCount={45} lobbySize={45} />
-      <LobbyCard lobbyName="419boys" lobbyActivePlayerCount={419} lobbySize={45} />
+      <div>
+        {Lobbies.map(lobby => (
+          <LobbyCard lobbyName={lobby.lobbyName} lobbyActivePlayerCount={lobby.lobbyActivePlayerCount} lobbySize={lobby.lobbySize} />
+        ))}
+      </div>
+
+      <LobbyDetails lobbyName="419boys" lobbyActivePlayerCount={419} lobbySize={45} />
     </div>
   );
 }
