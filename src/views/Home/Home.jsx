@@ -1,21 +1,20 @@
-import './style.scss'
-import Lobbies from '../../fakeDB/Lobbies.js'
-import LobbyCard from '../../components/LobbyCard/LobbyCard'
-import LobbyDetails from '../../components/LobbyDetails/LobbyDetails';
+import NavigationBar from "components/NavigationBar"
+import Blog from "components/Blog"
+import "./style.scss"
 
 function Home() {
-
   return (
-    <div className='Home'>
-      <div>
-        {Lobbies.map(lobby => (
-          <LobbyCard lobbyName={lobby.lobbyName} lobbyActivePlayerCount={lobby.lobbyActivePlayerCount} lobbySize={lobby.lobbySize} />
-        ))}
+    <div className="Home">
+      <NavigationBar></NavigationBar>
+      <div className="container mx-auto">
+        <div className="flex justify-between py-20">
+          <div className="text-2xl">Recent Blogs</div>
+          <button className="btn btn-blue">Create</button>
+        </div>
+        <Blog></Blog>
       </div>
-
-      <LobbyDetails lobbyName="419boys" lobbyActivePlayerCount={419} lobbySize={45} />
     </div>
-  );
+  )
 }
 
-export default Home;
+export default Home
