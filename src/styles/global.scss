@@ -7,3 +7,9 @@
     @apply bg-cyan-500 text-white hover:text-black;
   }
 }
+.input {
+  @apply rounded-md p-2 border-cyan-100 border-2 focus-visible:border-cyan-400 outline-0 #{!important};
+}
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
