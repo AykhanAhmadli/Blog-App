@@ -1,8 +1,8 @@
-import NavigationBar from "components/NavigationBar"
-import Blog from "components/Blog"
 import "./style.scss"
 import { useState } from "react"
+import Blog from "components/Blog"
 import ReactModal from "react-modal"
+import NavigationBar from "components/NavigationBar"
 
 function Home() {
   const [isCreateModelOpen, setisCreateModelOpen] = useState(false)
