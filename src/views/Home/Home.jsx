@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import NavigationBar from "components/NavigationBar"
 import Blog from "components/Blog"
 import "./style.scss"
@@ -17,10 +18,10 @@ function Home() {
       <NavigationBar />
       <div className="container mx-auto">
         <div className="flex justify-between py-20">
-          <div className="text-2xl">Recent Blogs</div>
-          <button className="btn btn-blue">Create</button>
+          <div className="text-2xl p-4 text-cyan-500">Recent Blogs</div>
+          <button className="btn btn-blue m-2">Create</button>
         </div>
-        <div className="grid grid-cols-2 gap-5">
+        <div className="m-2 grid grid-cols-2 gap-5">
           {blogs.map((blog, i) => (
             <Blog blog={blog} key={i} />
           ))}
